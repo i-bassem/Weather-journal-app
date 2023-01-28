@@ -19,4 +19,4 @@ Start the Server using node.js and enter (http://localhost:8000/) in your browse
 we used API key by signing up on openwethermap.com!
 
 
-![Alt text](Images/Screenshot%202023-01-28%20193016.jpg)
+![Weather App](Images/Screenshot%202023-01-28%20193016.jpg)
