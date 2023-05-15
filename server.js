@@ -1,6 +1,8 @@
 
 // Require Express to run server and routes
 const express = require('express');
+//Serveless**
+const serveless = require('serverless-http') 
 // Start up an instance of app
 const app = express();
 //Middleware
@@ -15,7 +17,6 @@ app.use(cors());
 
 // Initialize the main project folder(Server side code connecting with client side code)
 app.use(express.static('website'));
-
 
 // Setup Server
 const port = 8000 ;
@@ -37,13 +38,16 @@ function getData(req, res){
 }
 
 // Setup POST route
-
 app.post('/add', postData);
 
 function postData(req, res){
+
     projectData = req.body;
     console.log(projectData);
     res.send(projectData);
     console.log(req.body);
-
 };
+
+//*** */
+app.use('/.netlify/functions/api', router)
+module.exports.handler = serveless(app)

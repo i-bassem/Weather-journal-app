@@ -1,7 +1,17 @@
 {
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+   "scripts": {
+            "build":"netlify deploy --prod"
+   },
   "dependencies": {
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "netlify-cli": "15.0.2",
+    "netlify-lambda":"^2.0.15",
+    "serverless-http": "3.2.0"
   }
 }
